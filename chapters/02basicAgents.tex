@@ -2,9 +2,48 @@
 
 
 \chapter{Grundlegende Agenten}
-Was ist ein agent
-
-
-\section{Production Rule Systems}
+Der Begriff des Agenten ist nicht genau definiert, allerdings gibt es verbreitete Zustimmung zu den Grundeigenschaften.
+So ist die zentrale Eigenschaft von Software Agenten ihre Autonomie: Agenten finden sich selbständig in ihrer Umgebung bzw. in ihrem System zurecht. Sie können auf Veränderungen in ihrer Umgebung reagieren und verfolgen üblicherweise ein bestimmtes Ziel.[bader]%TODO: Zitat Wooldridge: Intelligent Agents: The Key Concepts. 2002, S. 5.
+Agenten eignen sich gut für den Einsatz in verteilten Systemen mit looser Kopplung.
+So kann man ein System mit neuen Agenten erweitern indem man einen weiteren Agenten hinzufügt, ohne bestehende Agenten anzupassen und ohne sie anhalten zu müssen.
+Durch die Autonomie der Agenten kann außerdem einen hohen Grad an Parralälität erreichen.
+Da das Konzept des software Agenten ähnlichkeit mit dem verhalten von Menschen aufweist, ist eine Verwendung zur Simulation und Analyse von menschlichem Verhalten naheliegend.
+Die verschiedenen Versuche, menschliche Eigenschaften wie Emotionen und soziale Einflüsse zu modellieren, die im Vergleichspaper zusammengefasst wurden, verdeutlichen dieses Bestreben.
 
 \section{BDI-Agenten}
+% weit verbreitet\\
+Das Belief-Desire-Intentions (BDI) Modell ist eines der verbreitesten Konzepte um Agenten zu modellieren.
+
+% beliefs desieres intents\\
+Die drei namensgebenden Begriffe sind daber die wesentlichen Bestandteile dieses Modells.
+Agenten dieser Klasse besitzen eine Wissensbasis (Beliefs) den sie für den aktuellen Zustand ihrer Umgebung halten.
+Die Wissensbasis ist z.B. durch Beobachtungen vernänderbar.
+Sie muss allerdings nicht dem tatsächlichem "Zustand der Welt" entsprechen.
+D.h. dass sie weder vollständig noch korrekt sein muss.
+Die Wünsche (Desires) des Agenten sind Ziele die ein Agent gerne erreichen würde.
+Sie bestimmen seine Aktionen nicht direkt. 
+Erst wenn bestimmte Wünsche in die Vorhaben (Intentions) des Agenten übernommen werden, wird versucht einen Wünsch mit eigenen Aktionen zu erfüllen.
+Üblicherweise werden Wissen und Wünsche in Prädikatenlogik formuliert.
+
+Das moddelieren von unvollständigem Wissen kann somit gut durch die "Kontrolle" der Beobachtungen des Agenten erreicht werden. 
+So könnte der Agent z.B. ganze Ereignisklassen ignorieren oder die Menge von Beobachtungen zu beschränken (z.B. durch einen virtuellen Ort an dem sich der Agent befindet).
+Ohne die Fähigkeit Schlüsse zu ziehen, entsteht falsches Wissen vor allem durch Veränderungen in der Umgebung, die nicht beobachtet werden.
+Da die Wissensbasis vor allem durch Bobachtungen gepflegt wird, können Veränderungen die nicht beobachtet werden, fakten der Wissensbasis obsolet machen.
+
+Das bewusste Modellieren von kognitiver Verzerrung ließe sich sowohl durch beeinflussung der Wünsche als auch des Wissens umsetzen. 
+Das festsetzen des Grundwissens eines Agenten könnte bereits falsche Fakten berücksichtigen. 
+Solche falschen Fakten müssten die Vorhaben und die resultierenden Aktionen beeinflussen.
+Es ist allerdings möglich das der Agent seine Wissensbasis durch neue Beobachtungen anpasst und das Grundwissen nach gewisser Zeit "repariert".
+Eine Verhinderung dieser Selbstheilung könnte durch Einschränkung der Beobachtungen weiter gehemmt werden.
+TODO: Verzerrung durch Wünsche
+% bias durch beliefs zb? schwarz = kriminell etc\\
+% bias durch intentions? bevorzugen von bestimmten zielen\\
+% interaktionen mit anderen Agenten sind nicht eingeplant
+\subsection{BDI Erweiterungen}
+Emotionen -> natürliche quelle für verzerrungen\\
+wo erwähnt?\\
+keine genaue spezifikation\\
+\\
+Verpflichtungen -> moddelieren von sozialem "druck"\\
+formale beschreibung -> keine implementierung vorhanden\\
+

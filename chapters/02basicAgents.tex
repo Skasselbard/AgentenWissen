@@ -2,67 +2,64 @@
 
 
 \chapter{Grundlegende Agenten}
-Der Begriff des Agenten ist nicht im speziellen definiert, allerdings gibt es verbreitete Zustimmung zu den Grundeigenschaften.
+Der Begriff des Agenten ist nicht im Speziellen definiert, allerdings gibt es verbreitete Zustimmung zu den Grundeigenschaften.
 So ist die zentrale Eigenschaft von Software Agenten ihre Autonomie: Agenten finden sich selbständig in ihrer Umgebung bzw. in ihrem System zurecht.
 Sie können auf Veränderungen in ihrer Umgebung reagieren und verfolgen üblicherweise ein bestimmtes Ziel.[bader]%TODO: Zitat Wooldridge: Intelligent Agents: The Key Concepts. 2002, S. 5.
 
-Multi-Agenten-Systeme eignen sich gut für den Einsatz in verteilten Systemen mit looser Kopplung.
-So kann man ein System mit zusätzlichen Agenten erweitern indem man einen weiteren Agenten hinzufügt.
+Multi-Agenten-Systeme eignen sich gut für den Einsatz in verteilten Systemen mit loser Kopplung.
+So kann man ein System mit zusätzlichen Agenten erweitern, indem man einen weiteren Agenten hinzufügt.
 Dabei müssen bestehende Agenten nicht angepasst oder angehalten werden.
-Durch die Autonomie der Agenten kann außerdem einen hohen Grad an Parralälität erreichen.
+Durch die Autonomie der Agenten kann außerdem ein hoher Grad an Parallelität erreicht werden.
 
-Da das Konzept des software Agenten Ähnlichkeit mit dem Verhalten von Menschen aufweist, ist eine Verwendung zur Simulation und Analyse von menschlichem Verhalten naheliegend.
+Da das Konzept des Software-Agenten Ähnlichkeit mit dem Verhalten von Menschen aufweist, ist eine Verwendung zur Simulation und Analyse von menschlichem Verhalten naheliegend.
 Die verschiedenen Versuche, menschliche Eigenschaften wie Emotionen und soziale Einflüsse zu modellieren, die im Vergleichspaper zusammengefasst wurden, verdeutlichen dieses Bestreben.
 
 \section{BDI-Agenten}
-% weit verbreitet\\
-Das Belief-Desire-Intentions (BDI) Modell ist eines der verbreitesten Konzepte um Agenten zu modellieren.
+Das Belief-Desire-Intentions (BDI) Modell ist eines der verbreitetsten Konzepte um Agenten zu modellieren.
 
-% beliefs desieres intents\\
-Die drei namensgebenden Begriffe sind daber die wesentlichen Bestandteile dieses Modells.
+Die drei namensgebenden Begriffe sind dabei die wesentlichen Bestandteile dieses Modells.
 Agenten dieser Klasse besitzen eine Wissensbasis (Beliefs) die sie für den aktuellen Zustand ihrer Umgebung halten.
-Die Wissensbasis ist z.B. durch Beobachtungen vernänderbar.
-Sie muss allerdings nicht dem tatsächlichem \enquote{Zustand der Welt} entsprechen.
-D.h. dass sie weder vollständig noch korrekt sein muss.
+Die Wissensbasis ist z.B. durch Beobachtungen veränderbar.
+Sie muss allerdings nicht dem tatsächlichen \enquote{Zustand der Welt} entsprechen.
+D.h., dass sie weder vollständig noch korrekt sein muss.
 
-Die Wünsche (Desires) des Agenten sind Ziele die ein Agent gerne erreichen würde.
+Die Wünsche (Desires) des Agenten sind Ziele, die ein Agent gerne erreichen würde.
 Sie bestimmen seine Aktionen nicht direkt. 
-Erst wenn bestimmte Wünsche in die Vorhaben (Intentions) des Agenten übernommen werden, wird versucht einen Wünsch mit eigenen Aktionen zu erfüllen.
-Üblicherweise werden Wissen und Wünsche in Prädikatenlogik formuliert.
+Erst wenn bestimmte Wünsche in die Vorhaben (Intentions) des Agenten übernommen werden, wird versucht einen Wünsch mit den eigenen Aktionen zu erfüllen.
 
-Das moddelieren von unvollständigem Wissen kann somit gut durch die \enquote{Kontrolle} der Beobachtungen des Agenten erreicht werden. 
-So könnte der Agent z.B. ganze Ereignisklassen ignorieren oder die Menge von Beobachtungen beschränken (z.B. durch einen virtuellen Ort an dem sich der Agent befindet).
+Das Modellieren von unvollständigem Wissen kann somit gut durch die \enquote{Kontrolle} der Beobachtungen des Agenten erreicht werden. 
+So könnte der Agent z.B. ganze Ereignisklassen ignorieren oder die Menge von Beobachtungen beschränken (z.B. durch einen virtuellen Ort, an dem sich der Agent befindet).
 
 Ohne die Fähigkeit Schlüsse zu ziehen, entsteht falsches Wissen vor allem durch Veränderungen in der Umgebung, die nicht beobachtet werden.
 Da die Wissensbasis vor allem durch Bobachtungen gepflegt wird, können Veränderungen die nicht beobachtet werden, Fakten der Wissensbasis obsolet machen.
 
 Das bewusste Modellieren von kognitiver Verzerrung ließe sich sowohl durch Beeinflussung der Wünsche als auch des Wissens umsetzen. 
 
-Letzteres könnte bereits durch das initiale Festsetzen des Grundwissens eines Agenten umgestetzt werden. 
-So könnten falschen Fakte - Vorhaben und die resultierenden Aktionen beeinflussen.
-Es ist allerdings möglich das der Agent seine Wissensbasis durch neue Beobachtungen anpasst und das Grundwissen nach gewisser Zeit \enquote{repariert}.
+Letzteres könnte bereits durch das initiale Festsetzen des Grundwissens eines Agenten umgesetzt werden. 
+So könnten falschen Fakten -- Vorhaben und die resultierenden Aktionen beeinflussen.
+Es ist allerdings möglich, dass der Agent seine Wissensbasis durch neue Beobachtungen anpasst und das Grundwissen nach gewisser Zeit \enquote{repariert}.
 Eine Verhinderung dieser Selbstheilung könnte durch Einschränkung der Beobachtungen weiter gehemmt werden.
 
-Eine permanentere Möglichkeit die Handlungen des Agenten zu beeinflussen ist die Definition von entsprechenden Wünschen die später in Aktionen umgewandelt werden.
+Eine permanentere Möglichkeit die Handlungen des Agenten zu beeinflussen, ist die Definition von entsprechenden Wünschen, die später in Aktionen umgewandelt werden.
 Diese könnten Ziele definieren die bestimmte Aktionen bevorzugen bzw. vernachlässigen.
 So könnte eine Verhaltensweise definiert werden die von der Norm oder Ratio abweicht.
 
-Durch die komplexen Zusammenhänge und der eher indirekten Beeinflussung der Aktionen, ist die Umsetzung dieses Ansatzes allerdings nicht trivial.
-Zum einen ist es schwierig die Aktionen des Agenten vorrauszusagen.
+Durch die komplexen Zusammenhänge und der eher indirekten Beeinflussung der Aktionen ist die Umsetzung dieses Ansatzes allerdings nicht trivial.
+Zum einen ist es schwierig die Aktionen des Agenten vorauszusagen.
 Zum anderen ist es schwierig den Grad des Einflusses einer bestimmten Regel zu bestimmen.
 Außerdem ist bei diesem Ansatz eine genaue Definition der Norm notwendig, von der eine Abweichung modelliert werden soll.
-Eine Vorraussetzung die an sich schon kompliziert sein kann und bei einigen ausprägungen von Verzerrungen bereits umstritten ist.
+Eine Voraussetzung, die an sich schon kompliziert sein kann und bei einigen Ausprägungen von Verzerrungen bereits umstritten ist.
 
 \subsection{BDI Erweiterungen}
-Es gibt einige Erweiterungen zu BDI Agenten die versuchen Menschliches Verhalten weiter auszumodellieren.
+Es gibt einige Erweiterungen zu BDI-Agenten die versuchen menschliches Verhalten weiter auszumodellieren.
 
 So wurde bei der Emotional-BDI\cite{} %Pereira et al. (2005); Jiang et al. (2007); Jiang (2007); Pereira et al. (2008))
-Erweiterung versucht menschliche Emotionen zu simulieren.
-Aufgrund der Tatsache das emotionales Verhalten quasi per Definition nicht rational ist, wäre dies eine passende Erweiterung um bestimmte emotionsbasierte Verzerungen zu modellieren.
+Erweiterung versucht, menschliche Emotionen zu simulieren.
+Aufgrund der Tatsache, dass emotionales Verhalten quasi per Definition nicht rational ist, wäre dies eine passende Erweiterung um bestimmte emotionsbasierte Verzerrungen zu modellieren.
 Leider scheint es keine komplette Spezifikation von zentralen Komponenten für diese Erweiterung zu geben\cite[paragraph 4.16]{balke2014agents}.
 
 Eine andere Erweiterung versucht BDI Agenten um soziale Verpflichtungen (Obligations) zu ergänzen.
-Auch hier ist die grundliegende Idee bereits einen Menschlicheren weniger rationalen Agenten zu modellieren.
+Auch hier ist die grundlegende Idee bereits einen Menschlicheren weniger rationalen Agenten zu modellieren.
 Besonders Verzerrungen die auf sozialem Druck basieren lassen sich mit diesem Ansatz abbilden.
 Diese Erweiterung ist offenbar besser formalisiert.
-Eine implementierung existiert jedoch noch nicht\cite[stand 2015]{balke2014agents}
+Eine Implementierung existiert jedoch noch nicht\cite[stand 2015]{balke2014agents}.
